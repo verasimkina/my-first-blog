@@ -25,7 +25,7 @@ SECRET_KEY = '4+ydkcvy*63%#te^*4n5x6nnj=^495t)vog@k1z(w!%$$yaq83'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'veras.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'verasimkina.pythonanywhere.com']
 
 
 # Application definition
@@ -77,7 +77,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'verasimkina$default',
+        'USER': 'verasimkina',
+        'PASSWORD': 'admin1234',
+        'HOST': 'verasimkina.mysql.pythonanywhere-services.com',
     }
 }
 
